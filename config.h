@@ -114,9 +114,9 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY,			XK_q,	   killclient,	   {0} },
-	{ MODKEY|ShiftMask,             XK_q,      spawn,          SHCMD("sh /home/sand/Folders/scripts/locksystem") },
-	{ MODKEY,			XK_BackSpace,	spawn,	   SHCMD("sh /home/sand/Folders/scripts/locksystem") },
-	{ MODKEY|ShiftMask,		XK_BackSpace,	spawn,	   SHCMD("sh /home/sand/Folders/scripts/locksystem") },
+	{ MODKEY|ShiftMask,             XK_q,      spawn,          SHCMD("sh ~/Folders/scripts/locksystem") },
+	{ MODKEY,			XK_BackSpace,	spawn,	   SHCMD("sh ~/Folders/scripts/locksystem") },
+	{ MODKEY|ShiftMask,		XK_BackSpace,	spawn,	   SHCMD("sh ~/Folders/scripts/locksystem") },
 
 	{ 0, XF86XK_AudioMute,			   spawn,	   SHCMD("pamixer -t; killall slstatus; slstatus") },
 	{ 0, XF86XK_AudioRaiseVolume,		   spawn,	   SHCMD("pamixer --allow-boost -i 2; killall slstatus; slstatus") },
