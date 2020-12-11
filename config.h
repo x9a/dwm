@@ -36,11 +36,13 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class     instance  title           tags mask  isfloating  isterminal  noswallow  monitor */
-	{ "Gimp",    NULL,     NULL,           0,         1,          0,           0,        -1 },
-	{ "Firefox", NULL,     NULL,           1 << 8,    0,          0,          -1,        -1 },
-	{ "st",      NULL,     NULL,           0,         0,          1,           0,        -1 },
-	{ NULL,      NULL,     "Event Tester", 0,         0,          0,           1,        -1 }, /* xev */
+	/* class     	instance  title           tags mask  isfloating  isterminal  noswallow  monitor */
+	{ "Gimp",    	NULL,     NULL,           0,         1,          0,           0,        -1 },
+	{ "firefox", 	NULL,     NULL,           1 << 1,    0,          0,           0,        -1 },
+	{ "lightcord",  NULL,     NULL,           1 << 7,    0,		 0,	      0,	-1 },
+	{ "ckb-next",	NULL,	  NULL,		  1 << 8,    0,		 0,	      0,	-1 },
+	{ "st",      	NULL,     NULL,           0,         0,          1,           0,        -1 },
+	{ NULL,      	NULL,     "Event Tester", 0,         0,          0,           1,        -1 }, /* xev */
 };
 
 /* layout(s) */
@@ -116,6 +118,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY,			XK_q,	   killclient,	   {0} },
 	{ MODKEY|ShiftMask,             XK_q,      spawn,          SHCMD("sh ~/Folders/scripts/locksystem") },
+	/* { MODKEY|ControlMask,           XK_q,      quit,           {.i = 23} }, */
 	{ MODKEY,			XK_BackSpace,	spawn,	   SHCMD("sh ~/Folders/scripts/locksystem") },
 	{ MODKEY|ShiftMask,		XK_BackSpace,	spawn,	   SHCMD("sh ~/Folders/scripts/locksystem") },
 
