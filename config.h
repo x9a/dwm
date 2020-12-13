@@ -45,7 +45,7 @@ static const Rule rules[] = {
 	{ "Minecraft 1.8.9",			NULL,	  NULL,		  1 << 2,    0,		 0,	      0,	-1 },
 	{ "Minecraft 1.12.2",			NULL,	  NULL,		  1 << 2,    0,		 0,	      0,	-1 },
 	{ "net-runelite-client-RuneLite",	NULL,	  NULL,		  1 << 2,    0,		 0,	      0,	-1 },
-	{ "Pcmanfm",				NULL,	  NULL,		  1 << 4,    0,		 0,	      0,	-1 },
+	{ "pcmanfm-qt",				NULL,	  NULL,		  1 << 4,    0,		 0,	      0,	-1 },
 	{ "st",      				NULL,     NULL,           0,         0,          1,           0,        -1 },
 	{ NULL,      				NULL,     "Event Tester", 0,         0,          0,           1,        -1 }, /* xev */
 };
