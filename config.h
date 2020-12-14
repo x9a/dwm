@@ -49,6 +49,7 @@ static const Rule rules[] = {
 	{ "Minecraft 1.12.2",			NULL,	  NULL,		  1 << 2,    0,		 0,	      0,	-1 },
 	{ "net-runelite-client-RuneLite",	NULL,	  NULL,		  1 << 2,    0,		 0,	      0,	-1 },
 	{ "pcmanfm-qt",				NULL,	  NULL,		  1 << 4,    0,		 0,	      0,	-1 },
+	{ "Pcmanfm",				NULL,	  NULL,		  1 << 4,    0,		 0,	      0,	-1 },
 	{ "st",      				NULL,     NULL,           0,         0,          1,           0,        -1 },
 	{ NULL,      				NULL,     "Event Tester", 0,         0,          0,           1,        -1 }, /* xev */
 };
@@ -130,7 +131,11 @@ static Key keys[] = {
 	/* { MODKEY|ControlMask,           XK_q,      quit,           {.i = 23} }, */
 	{ MODKEY,			XK_BackSpace,	spawn,	   SHCMD("sh ~/Folders/scripts/locksystem") },
 	{ MODKEY|ShiftMask,		XK_BackSpace,	spawn,	   SHCMD("sh ~/Folders/scripts/locksystem") },
-
+	{ ShiftMask,			XK_Print,	spawn,	   SHCMD("sh ~/Folders/scripts/scrotshot") },
+	{ MODKEY,			XK_Print,	spawn,	   SHCMD("sh ~/Folders/scripts/scrotshot") },
+	{ MODKEY|ShiftMask,		XK_Print,	spawn,	   SHCMD("sh ~/Folders/scripts/scrotshot") },
+	{ 0,				XK_Print,	spawn,	   SHCMD("scrot $f ~/Pictures/Screenshots/screenshot-$(date '+%y%m%d-%H%M-%S').png") },
+	
 	{ 0, XF86XK_AudioMute,			   spawn,	   SHCMD("pamixer -t; killall slstatus; slstatus") },
 	{ 0, XF86XK_AudioRaiseVolume,		   spawn,	   SHCMD("pamixer --allow-boost -i 2; killall slstatus; slstatus") },
 	{ 0, XF86XK_AudioLowerVolume,		   spawn,	   SHCMD("pamixer --allow-boost -d 2; killall slstatus; slstatus") },
